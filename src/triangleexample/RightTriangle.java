@@ -2,73 +2,76 @@ package triangleexample;
 
 public class RightTriangle {
 
-
 	/*
-	 * File: RightTriangle.java
-	 * -------------------
-	 * This file defines a simple class for representing right triangles.
+	 * File: RightTriangle.java ------------------- This file defines a simple
+	 * class for representing right triangles.
 	 */
 
+	private int a = 1;
+	private int b = 1;
 
-	private double a = 1;
-	private double b = 1;
-
-	public RightTriangle(double a, double b) {
+	public RightTriangle(int a, int b) {
 		// Your code starts here
-		if(0 < a){
+		if (0 < a) {
 			this.a = a;
 		}
-		if(0 < b){
+		if (0 < b) {
 			this.b = b;
 		}
 		// Your code ends here
 	}
 
-
-	public double getA() {
+	public int getA() {
 		// Your code starts here
 		return a;
 		// Your code ends here
 	}
 
-	public void setA(double a) {
+	public void setA(int a) {
 		// Your code starts here
-		if(0 < a){
+		if (0 < a) {
 			this.a = a;
 		}
 		// Your code ends here
 	}
 
-	public double getB() {
+	public int getB() {
 		// Your code starts here
 		return b;
 		// Your code ends here
 	}
 
-	public void setB(double b) {
+	public void setB(int b) {
 		// Your code starts here
-		if(0 < b){
+		if (0 < b) {
 			this.b = b;
 		}
 		// Your code ends here
 	}
 
-	public double perimeter() {
+	public int perimeter() {
 		// Your code starts here
 		return a + b + hypotenuse();
 		// Your code ends here
 	}
 
-	private double hypotenuse() {
+	public int hypotenuse() {
 		// Your code starts here
-		return Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2));
+		return (int)Math.hypot(a, b);
 		// Your code ends here
 	}
-	
-	public double area() {
+
+	public int area() {
 		// Your code starts here
 		return a * b / 2;
 		// Your code ends here
+	}
+	
+	@Override
+	public String toString(){
+		return " A: " + this.getA() + " B: " + this.getB() 
+		+  " Hypotenuse:" + this.hypotenuse()+ " Area: "+  this.area() 
+		+ " Perimeter: " + this.perimeter();
 	}
 
 }
