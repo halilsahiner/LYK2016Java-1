@@ -13,3 +13,10 @@ Create getter-setters for registeredStudents, name, instructorName
 Create getter for Department
 
 Then test Student, Department, Course
+
+---add registerStudent method to Department, for example
+
+ public void registerStudent(Student st) {
+            registeredStudents.add(st); 
+            department.appendStudent(st); 
+        }
