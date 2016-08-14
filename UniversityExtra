@@ -14,7 +14,7 @@ Create getter for Department
 
 Then test Student, Department, Course
 
----add registerStudent method to Department, for example
+---add registerStudent method to Course, for example
 
  public void registerStudent(Student st) {
             registeredStudents.add(st); 
